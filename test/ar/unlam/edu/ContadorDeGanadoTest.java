@@ -9,23 +9,31 @@ public class ContadorDeGanadoTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void queUnContadorInicieEnCero() {
-		// 1. Preparación
+		// 1. PreparaciÃ³n
 		ContadorDeGanado miContadorDeGanado = new ContadorDeGanado();
 		Integer valorEsperado = 0;
-		// 2. Ejecución
+		// 2. EjecuciÃ³n
 		Integer cantidadActual = miContadorDeGanado.mostrarCantidad();
-		// 3. Contrastación
+		// 3. ContrastaciÃ³n
 		Assert.assertEquals(valorEsperado, cantidadActual);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Test
-	public void queElcontadorCuenteUno() {
+	public void queElcontadorPuedaContar() {
 		ContadorDeGanado miContadorDeGanado = new ContadorDeGanado();
-		Integer valorEsperado = 1;
+		
+		Integer valorInicial = 0;
+		Integer cantidadInicial = miContadorDeGanado.mostrarCantidad();
+		
+		Assert.assertEquals(valorInicial, cantidadInicial);
+		
 		miContadorDeGanado.contar();
-		Integer cantidadActual = miContadorDeGanado.mostrarCantidad();
-		Assert.assertEquals(valorEsperado, cantidadActual);
+		
+		Integer valorEsperado = 1;
+		Integer cantidadFinal = miContadorDeGanado.mostrarCantidad();
+		
+		Assert.assertEquals(valorEsperado, cantidadFinal);
 		
 	}
 
