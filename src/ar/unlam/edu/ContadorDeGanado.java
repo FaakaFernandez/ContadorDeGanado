@@ -2,7 +2,11 @@ package ar.unlam.edu;
 
 public class ContadorDeGanado {
 
-	private Integer cantidad = 0;
+	private Integer cantidad;
+	
+	public ContadorDeGanado(){
+		this.cantidad = 0;
+	}
 	
 	public void contar() {
 		cantidad = cantidad + 1;
